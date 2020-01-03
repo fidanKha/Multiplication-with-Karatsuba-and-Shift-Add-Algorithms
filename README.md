@@ -7,14 +7,16 @@ complexity.&nbsp; First the given inputs are divided into 2 halves, so:
 <br/>
 &nbsp;
 XY= (Xl* pow(2, n/2) + Xr)(Yl* pow(2, n/2) + Yr)
-&nbsp; Doing this with the classical method would take 4 separate multiplications, however since the multiplication can also
+<br/>
+Doing this with the classical method would take 4 separate multiplications, however since the multiplication can also
 be written as:\ XY= XlYl* pow(2, n) + (XlYr + XrYl)* pow(2,n/2) + XrYr 
-&nbsp;
+<br/>
 In Karatsuba after calculating the result of XlYl and XrYr multiplications, XlYr + XrYl is found as: 
-&nbsp;
+<br/>
 (Xl + Xr)(Yl + Yr) - XlYl- XrYr
-&nbsp;
-So, the recurrence becomes: T(n) = 3T(n/2) + O(n) &nbsp;
+<br/>
+So, the recurrence becomes: T(n) = 3T(n/2) + O(n) 
+<br/>
 
 
 As a result, the time complexity of Karatsuba is O(n^1.59) whereas this value is O(n^2) for Add+Shift function.
